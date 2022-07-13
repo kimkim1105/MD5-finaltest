@@ -1,0 +1,16 @@
+<button routerLink="create">Thêm mới</button>
+<table>
+  <tr>
+    <th>#</th>
+    <th>Tên</th>
+    <th>Giá</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor = "let item of listTours; let indexOfElement = index">
+    <td>{{indexOfElement+1}}</td>
+    <td><a routerLink="detail-tour/{{item.id}}" >{{item.title}}</a></td>
+    <td>{{item.price}}</td>
+    <td><a routerLink="edit-tour/{{item.id}}">Edit</a></td>
+    <td><a routerLink="delete-tour/{{item.id}}">Delete</a></td>
+  </tr>
+</table>

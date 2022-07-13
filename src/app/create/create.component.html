@@ -1,0 +1,12 @@
+<button routerLink="">Danh sách</button>
+<p>Thêm Tours</p>
+<form [formGroup]="form" (submit)="add()">
+  <label>Tên tour</label>
+  <input type="text" formControlName = "title"><br>
+  <label>Giá</label>
+  <input type="text" formControlName = "price"><br>
+  <label>Mô tả</label>
+  <input type="text" formControlName = "description"><br>
+  <button>Thêm mới</button>
+  <button type="button" routerLink="">Hủy</button>
+</form>
